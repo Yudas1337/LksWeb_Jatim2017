@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href="/stylesheets/bootstrap.css" >
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+     <!-- Fixed navbar -->
+     <nav class="navbar navbar-default navbar-fixed-top" style="background:#002350;">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          <h4 class="nav-head-custom">GEEK BOT</h4>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right ">
+            <%if(account){ %>
+              <li><a  href="/users"><%= nama %></a></li>
+              <li><a  href="/logout">Log Out</a></li>
+          <% }else{ %>
+            <li><a  href="/login">Log in</a></li>
+            <li><a  href="/register">Register</a></li>
+            <% } %>
+              </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <br>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Geek Bot!</h1>
+        <p>Check Out our latest product that might be what you need for your next project in our product gallery </p>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-1 col-sm-1 col-lg-1">
+          <div class="bar" style="background:url('/images/wallpaper.jpg')"></div>
+      </div>
+      <div class="col-md-10 col-sm-10 col-lg-10">
+        <div class="row">
+                <h1>Geek Bot Shop</h1>      
+        </div>
+    <!--  <form  action="/index" method="get" class="data">-->
+        <input type="hidden" name="customer" value=1>
+        <input type="hidden" name="orderdate" value="2014-3-31">
+        <div class="shop-box">
+          <ul class="shop-list">
+      <!--      <li>
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-lg-4">
+                <h3><strong><span class="idproduk">1001</span> - <span class="namabarang">arquino</span></strong></h3>
+                  1 / blue / 2012-3-3
+                </div>
+                <div style="font-size: 20px;" class="col-md-4 col-sm-4 col-lg-4">
+                    @Rp. <span class="harga_produk">120000</span>
+                   <br>kategori
+                </div>
+                <div class="col-md-2 col-sm-2 col-lg-2">
+                    <input type="number" name="jumlahbarang" value=0 onchange="multiply(this)" autocomplete="off" min=0>
+                    <h4><strong>Rp. <span class="harga">0</span> </strong></h4>
+                </div>
+               
+              </div>
+            </li>
+            <li>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-lg-4">
+                  <h3><strong><span class="idproduk">3201</span> - <span class="namabarang">Waspberry</span> </strong></h3>
+                    1 / green / 2007-5-12
+                  </div>
+                  <div style="font-size: 20px;" class="col-md-4 col-sm-4 col-lg-4">
+                    @Rp. <span class="harga_produk" >350000</span>
+                    <br> kategori
+                  </div>
+                  <div class="ptag col-md-2 col-sm-2 col-lg-2">
+                      <input type="number" name="jumlahbarang" value=0 onchange="multiply(this)" autocomplete="off" min=0>
+                      <h4><strong>Rp. <span class="harga">0</span> </strong></h4>
+                  </div>
+                 
+                </div>
+              </li>
+            -->
+              
+              
+
+
+          </ul>
+          
+        </div>
+        
+        <h1>Paket Pengiriman</h1>
+       
+        <div class="row" style="border-bottom: 5px solid #B4FAFF;">
+            <div class=" col-md-3 col-sm-3 col-lg-3">
+                <h4>Pilih Paket</h4>
+            </div>  
+          <div class=" col-md-3 col-sm-3 col-lg-3">
+                <select name="kirim" id="kirim" onchange="paket(this)" autocomplete="off" required>
+                    <option value="0">Ambil di toko</option>
+                    <option value="20000">Standard</option>
+                    <option value="40000">Kilat</option>
+                  </select>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <h1 style="text-align:right;">Rp. <span  class="paket harga">0</span></h1>
+            </div>
+        </div>
+        
+        <br><br>
+        <h1 style="text-align:right;">Total Harga : Rp. <span class="total">0</span></h1> 
+      
+      <!--</form>-->
+      <center>  <button onclick="Cart()" class="btn btn-success">Submit</button></center>
+      <br><br>
+      </div>
+      
+      <div class="col-md-1 col-sm-1 col-lg-1">
+        <div class="bar" style="background:url('/images/wallpaper.jpg')"></div>
+      </div>
+
+    </div>
+
+    <!-- The Modal -->
+<div id="ModalEditor" class="modal">
+    
+   <!-- Modal content -->
+   <div class="modal-content">
+     <div class="modal-header">
+       <span class="close">&times;</span>
+       <h2>Confirm Order</h2>
+     </div>
+     <div class="modal-body">
+         <form  method="get" action="/buy">
+         <h1>List Barang</h1>
+         <div class="table-responsive">          
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Jumlah</th>
+                <th>Harga total</th>
+              </tr>
+            </thead>
+            <tbody class="listbarang">
+              <tr>
+                <td>0</td>
+                <td>Contoh Tabel</td>
+                <td>3</td>
+                <td>500000</td>             
+              </tr>
+               
+            </tbody>
+          </table>
+          </div>
+         <h2>Biaya Paket Pengiriman : Rp. <span class="paket">0</span> </h2>
+         <h2>Total Harga : Rp. <span class="total">0</span> </h2>
+         Buy?
+         <div class="listinput">
+           
+         </div>
+         
+         <input type="hidden" name="idproduk">
+         <input type="hidden" name="namaproduk">
+         <input type="hidden" name="jumlahproduk">
+         <input type="hidden" name="hargaproduk">
+         <input type="hidden" name="hargakirim">
+         
+         <input type="submit"  name="Yes" value="Yes">
+         <input type="button" class="cancel"  name="No" value="No">
+         </form>
+     </div>
+     <div class="modal-footer">
+       
+     </div>
+   </div>
+ 
+ </div>
+   
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="/javascripts/jquery-3.1.0.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="/javascripts/bootstrap.js"></script>
+    
+     <script>
+      function TotHar() {
+        var har = $("span.harga");
+       // console.log( $(har[1]).text() );
+       var all = 0;
+       var harga;
+        for (var i = 0; i < har.length; i++) {
+          harga = parseInt( $(har[i]).html() ); 
+          all+= harga;
+        }
+
+        $(".total").html( all );
+       }
+
+       function multiply(select) {
+        var qty = $(select).val();
+        price = $(select).parent().prev().children(".harga_produk").html();
+
+        $(select).next().find(".harga").html(price * qty);
+
+        $(select).next().val(price*qty);
+
+          TotHar();
+        
+       }
+
+       function paket(select){
+         $(".paket").html($(select).val());
+
+         TotHar();
+       }
+
+  
+
+     // Get the modal
+var modal = document.getElementById('ModalEditor');
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var cancel = document.getElementsByClassName("cancel")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+
+}
+cancel.onclick = function() {
+    modal.style.display = "none";
+
+}
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+//$( "input[name*='kode']" ).val( "has man in it!" );  
+/*$(".clickable").click(
+  function () {
+    $( "input[name*='kode']" ).val( "has man in it!" );
+    modal.style.display = "block";  
+  }
+
+  );
+*/
+  //kode,barang,jumlah,unit,harga,disc
+  var idproduk = [],namaproduk = [],jumlahproduk = [],hargaproduk = [];
+
+function Cart() {
+  var idlist = 0;
+  $("tbody.listbarang").html("");
+  $(".listinput").html("");
+  $("ul.shop-list").children("li").each(function(index){
+    if($(this).find(".harga").html() > 0){
+        idproduk[idlist] = $(this).find(".idproduk").html();
+        namaproduk[idlist] = $(this).find(".namabarang").html();
+        jumlahproduk[idlist] = $(this).find("input[name*='jumlahbarang']").val();
+        hargaproduk[idlist] = $(this).find(".harga").html();
+        idlist++;
+
+
+        $("tbody.listbarang").append(
+        $("<tr>").append(
+          "<td>"+$(this).find(".idproduk").html()+"</td>"
+          +"<td>"+$(this).find(".namabarang").html()+"</td>"
+          +"<td>"+$(this).find("input[name*='jumlahbarang']").val()+"</td>"
+          +"<td>"+$(this).find(".harga").html()+"</td>"
+        )
+      )
+      
+    
+    }
+
+    $( "input[name*='hargakirim']" ).val($(".paket").html());
+
+  
+    $( "input[name*='idproduk']" ).val(JSON.stringify(idproduk) );
+    $( "input[name*='namaproduk']" ).val(JSON.stringify(namaproduk) );
+    $( "input[name*='jumlahproduk']" ).val(JSON.stringify(jumlahproduk) );
+    $( "input[name*='hargaproduk']" ).val(JSON.stringify(hargaproduk) );
+    
+    
+    
+    
+  })
+
+
+  //console.log(idproduk);
+  //console.log(namaproduk);
+  modal.style.display = "block";  
+}
+
+
+     </script>
+  </body>
+</html>

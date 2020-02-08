@@ -1,0 +1,66 @@
+=============
+Home
+=============
+GEEK-BOT
+Where innovations create the best future
+
+=============
+About Us
+=============
+GEEK-BOT WHERE INNOVATIONS CREATE THE BEST FUTURE
+
+GEEK-BOT is a company that focus in robot development.
+
+=============
+Why Choose Us
+=============
+Flexible Design
+Geek-Bot products are always designed to be as flexible as possible in both software and mechanics
+
+
+Very Efficient
+Geek-Bot products have a very good efficiency, both in terms of energy and movement
+
+
+Attractive Model
+Geek-Bot products are designed with an attractive design without reducing the efficiency of the product
+
+
+Easy Programming
+Geek-Bot software is supported by open source community and there are many tutorials online
+
+=============
+Why Choose Us
+=============
+Featured Products
+-----------------
+NEO ROBOT
+Neo Robot is a robot made in 2016 that can move like human.
+
+LEGO ROBOT
+LEGO Robot can be used for highly interactive teaching and learning process for beginner.
+
+BTK10
+BTK10 is an industrial robot that can do some work in a factory.
+
+C-WHEEL
+C-Wheel is our most recent product, this robot is intended transporting items, this robot is equipped with auto drive feature.
+
+Our Products
+------------
+Check out some of our latest and greatest products.
+Humanoid / LEGO / Industrial / Transportation
+
+=============
+Testimonial
+=============
+What Our Customers Said
+
+GEEK-BOT is AWESOME!!!
+
+Anonymous
+
+=============
+Contact Us
+=============
+Have any question? Send a message!

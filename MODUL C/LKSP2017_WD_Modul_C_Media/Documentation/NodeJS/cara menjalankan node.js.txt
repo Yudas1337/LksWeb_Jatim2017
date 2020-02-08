@@ -1,0 +1,24 @@
+buka command prompt
+
+arahkan direktori ke folder web server
+contoh : 
+c:\Users\name cd C:\Users\name\Documents\webserver
+
+untuk menyalakan server masukkan command berikut
+> npm start
+contoh :
+C:\Users\name\Documents\webserver> npm start
+
+atau
+> node ./bin/www
+contoh :
+C:\Users\name\Documents\webserver> node ./bin/www
+
+untuk menonaktifkan server ketikkan command berikut
+
+ctrl+c
+  
+untuk mengakses web setelah diaktifkan urlnya adalah
+(port yang diakses sesuai dengan yang ditulis di file bin/www)
+
+localhost:3000

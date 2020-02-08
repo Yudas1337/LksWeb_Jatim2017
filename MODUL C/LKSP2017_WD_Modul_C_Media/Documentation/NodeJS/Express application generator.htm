@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Express application generator</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async="" data-rocketsrc="//www.googletagmanager.com/gtm.js?id=GTM-5XL76H" data-rocketoptimized="true"></script><script type="text/javascript" src="Express%20application%20generator_files/gtm.htm"></script><script type="text/javascript">
+//<![CDATA[
+window.__cfRocketOptions = {byc:0,p:0,petok:"95969f184d8deb7770eedee7a4a88657c1b6e733-1508350054-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="Express%20application%20generator_files/rocket.js"></script>
+<link rel="icon" type="image/png" href="https://expressjs.com/images/favicon.png">
+<link rel="stylesheet" href="Express%20application%20generator_files/style.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/dropit.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/prism.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/font-awesome.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/css_004.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/en.css">
+<link rel="stylesheet" href="Express%20application%20generator_files/nodeinteractive.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-cfasync="false" src="Express%20application%20generator_files/jquery.js"></script>
+<script data-cfasync="false" src="Express%20application%20generator_files/ismobile.js"></script>
+<script data-cfasync="false" src="Express%20application%20generator_files/app.js"></script>
+<script data-cfasync="false" src="Express%20application%20generator_files/retina.js"></script>
+<script data-cfasync="false" src="Express%20application%20generator_files/dropit.js"></script>
+<script data-cfasync="false" src="Express%20application%20generator_files/prism.js"></script>
+<link id="avast_os_ext_custom_font" href="Express%20application%20generator_files/css.css" rel="stylesheet" type="text/css"><link href="Express%20application%20generator_files/css_005.css" rel="stylesheet" type="text/css"><link href="Express%20application%20generator_files/css_003.css" rel="stylesheet" type="text/css"><link href="Express%20application%20generator_files/css_002.css" rel="stylesheet" type="text/css"><style id="wrc-css" type="text/css">.wrcx {display:none} .r .wrcx,  .fc .wrcx, #rhsline ol .wrcx {display:inline-block !important; position:relative !important; background: url("moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/serp-none.png") right no-repeat},.wrcx {display:none} .osl .wrcx, .vresult .r, .tl .r .wrcx{ display: none;}
+.wrc0 {display:none} .r .wrc0,  .fc .wrc0, #rhsline ol .wrc0 {display:inline-block !important; position:relative !important; background: url("moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/serp-none.png") right no-repeat},.wrc0 {display:none} .osl .wrc0, .vresult .r, .tl .r .wrc0{ display: none;}
+.wrc1 {display:none} .r .wrc1,  .fc .wrc1, #rhsline ol .wrc1 {display:inline-block !important; position:relative !important; background: url("moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/serp-ok.png") right no-repeat},.wrc1 {display:none} .osl .wrc1, .vresult .r, .tl .r .wrc1{ display: none;}
+.wrc2 {display:none} .r .wrc2,  .fc .wrc2, #rhsline ol .wrc2 {display:inline-block !important; position:relative !important; background: url("moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/serp-attention.png") right no-repeat},.wrc2 {display:none} .osl .wrc2, .vresult .r, .tl .r .wrc2{ display: none;}
+.wrc3 {display:none} .r .wrc3,  .fc .wrc3, #rhsline ol .wrc3 {display:inline-block !important; position:relative !important; background: url("moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/serp-error.png") right no-repeat},.wrc3 {display:none} .osl .wrc3, .vresult .r, .tl .r .wrc3{ display: none;}
+#wrcHoverDiv .aos-tooltip-logo-img { background-image: url(moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/logo-white.png); }
+#wrcHoverDiv .aos-tooltip-attention .aos-tooltip-logo-img { background-image: url(moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/logo-dark.png); }</style></head>
+<body class="en-doc" data-pinterest-extension-installed="ff1.37.9"><div id="wrcHoverDiv"><div id="wrccontainer" class="aos-tooltip"><div class="aos-tooltip-arrow"></div><a class="aos-tooltip-logo"><span class="aos-tooltip-logo-img"></span><span class="aos-tooltip-logo-text">Online Security</span></a><div id="wrcratingicon" class="aos-tooltip-icon" style="background-image: url(&quot;moz-extension://99d11454-2f8c-4bce-adf1-cb23e2e9449a/common/ui/icons/unknown.png&quot;);"></div><div id="wrcratingtext" class="aos-tooltip-text">This site has no rating</div></div></div>
+<section class="page content">
+<header>
+<div id="mobile-menu">
+<div id="nav-button" class="fa fa-bars fa-2x button"></div>
+</div>
+<section id="logo"><a href="https://expressjs.com/" class="express">Express</a>
+</section>
+<div id="navbar">
+<ul id="navmenu">
+<li><a href="https://expressjs.com/" id="home-menu">Home</a></li>
+<li>
+<ul id="getting-started-menu" class="menu dropit">
+<li class="dropit-trigger"><a href="https://expressjs.com/en/starter/installing.html" class="active">Getting started</a>
+<ul class="dropit-submenu" style="display: none;">
+<li>
+<a href="https://expressjs.com/en/starter/installing.html">
+Installing
+</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/starter/hello-world.html">
+Hello world
+</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/starter/generator.html" class="current">
+Express generator
+</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/starter/basic-routing.html">
+Basic routing
+</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/starter/static-files.html">
+Static files
+</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/starter/faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul id="guide-menu" class="menu dropit">
+<li class="dropit-trigger"><a href="https://expressjs.com/en/guide/routing.html">Guide</a>
+<ul class="dropit-submenu" style="display: none;">
+<li><a href="https://expressjs.com/en/guide/routing.html">Routing</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/writing-middleware.html">Writing middleware</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/using-middleware.html">Using middleware</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/error-handling.html">Error handling</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/debugging.html">Debugging</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/behind-proxies.html">Express behind proxies</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/migrating-4.html">Moving to Express 4</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/migrating-5.html">Moving to Express 5</a>
+</li>
+<li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul id="application-menu" class="menu dropit">
+<li class="dropit-trigger"><a href="https://expressjs.com/en/4x/api.html">API reference</a>
+<ul class="dropit-submenu" style="display: none;">
+<li><a href="https://expressjs.com/en/4x/api.html">4.x</a>
+</li>
+<li><a href="https://expressjs.com/en/3x/api.html">3.x (deprecated)</a>
+</li>
+<li><a href="https://expressjs.com/2x/">2.x (deprecated)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul id="advanced-topics-menu" class="menu dropit">
+<li class="dropit-trigger"><a href="https://expressjs.com/en/advanced/developing-template-engines.html">Advanced topics</a>
+<ul class="dropit-submenu" style="display: none;">
+<li><a href="https://expressjs.com/en/advanced/developing-template-engines.html">Template engines</a>
+</li>
+<li><a href="https://expressjs.com/en/advanced/pm.html">Using process managers</a>
+</li>
+<li><a href="https://expressjs.com/en/advanced/security-updates.html">Security updates</a>
+</li>
+<li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Security best practices</a>
+</li>
+<li><a href="https://expressjs.com/en/advanced/best-practice-performance.html">Performance best practices</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul id="resources-menu" class="menu dropit">
+<li class="dropit-trigger"><a href="https://expressjs.com/en/resources/glossary.html">Resources</a>
+<ul class="dropit-submenu" style="display: none;">
+<li>
+<a href="https://expressjs.com/en/resources/community.html">Community</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/glossary.html">Glossary</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/middleware.html">Middleware</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/utils.html">Utility modules</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/frameworks.html">Frameworks</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/books-blogs.html">Books and blogs</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/companies-using-express.html">Companies using Express</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/resources/contributing.html">Contributing to Express</a>
+</li>
+<li>
+<a href="https://expressjs.com/en/changelog/4x.html">Release Change Log</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</header>
+<div id="overlay"></div>
+<div id="page-doc" markdown="1">
+<h1 id="express-application-generator">Express application generator</h1>
+<p>Use the application generator tool, <code>express-generator</code>, to quickly create an application skeleton.</p>
+<p>The <code>express-generator</code> package installs the <code>express</code> command-line tool. Use the following command to do so:</p>
+<pre class="language-sh"><code class="language-sh">$ npm install express-generator -g
+</code></pre>
+<p>Display the command options with the <code>-h</code> option:</p>
+<pre class="language-sh"><code class="language-sh">$ express -h
+
+  Usage: express [options] [dir]
+
+  Options:
+
+    -h, --help          output usage information
+        --version       output the version number
+    -e, --ejs           add ejs engine support
+        --hbs           add handlebars engine support
+        --pug           add pug engine support
+    -H, --hogan         add hogan.js engine support
+    -v, --view &lt;engine&gt; add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+        --git           add .gitignore
+    -f, --force         force on non-empty directory
+</code></pre>
+<p>For example, the following creates an Express app named <em>myapp</em>. The app will be created in a folder named <em>myapp</em> in the current working directory and the view engine will be set to <a href="https://pugjs.org/" target="_blank" title="Pug documentation" wrc_done="true">Pug</a><span class="wrc0 wrc_icon wrc_injected"></span>:</p>
+<pre class="language-sh"><code class="language-sh">$ express --view=pug myapp
+
+   create : myapp
+   create : myapp/package.json
+   create : myapp/app.js
+   create : myapp/public
+   create : myapp/public/javascripts
+   create : myapp/public/images
+   create : myapp/routes
+   create : myapp/routes/index.js
+   create : myapp/routes/users.js
+   create : myapp/public/stylesheets
+   create : myapp/public/stylesheets/style.css
+   create : myapp/views
+   create : myapp/views/index.pug
+   create : myapp/views/layout.pug
+   create : myapp/views/error.pug
+   create : myapp/bin
+   create : myapp/bin/www
+</code></pre>
+<p>Then install dependencies:</p>
+<pre class="language-sh"><code class="language-sh">$ cd myapp
+$ npm install
+</code></pre>
+<p>On MacOS or Linux, run the app with this command:</p>
+<pre class="language-sh"><code class="language-sh">$ DEBUG=myapp:* npm start
+</code></pre>
+<p>On Windows, use this command:</p>
+<pre class="language-sh"><code class="language-sh">&gt; set DEBUG=myapp:* &amp; npm start
+</code></pre>
+<p>Then load <code>http://localhost:3000/</code> in your browser to access the app.</p>
+<p>The generated app has the following directory structure:</p>
+<pre class="language-sh"><code class="language-sh">.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.pug
+    ├── index.pug
+    └── layout.pug
+
+7 directories, 9 files
+</code></pre>
+<div class="doc-box doc-info">
+<p>The app structure created by the generator is just one of many ways 
+to structure Express apps. Feel free to use this structure or modify it 
+to best suit your needs.</p>
+</div>
+</div>
+</section>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5XL76H" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+</noscript>
+<script type="text/rocketscript" data-rocketoptimized="true">
+(function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5XL76H');
+</script>
+<a id="top" href="#"><img src="Express%20application%20generator_files/arrow.png"></a>
+<footer>
+<section id="doc-langs">
+Documentation translations provided by <a href="http://strongloop.com/" wrc_done="true">StrongLoop/IBM</a><span class="wrc0 wrc_icon wrc_injected"></span>:
+<a href="https://expressjs.com/fr/">French</a>, <a href="https://expressjs.com/de/">German</a>, <a href="https://expressjs.com/es/">Spanish</a>, <a href="https://expressjs.com/it/">Italian</a>, <a href="https://expressjs.com/ja/">Japanese</a>, <a href="https://expressjs.com/ru/">Russian</a>, <a href="https://expressjs.com/zh-cn/">Chinese</a>, <a href="https://expressjs.com/zh-tw/">Traditional Chinese</a>, <a href="https://expressjs.com/ko/">Korean</a>, <a href="https://expressjs.com/pt-br/">Portuguese</a>.
+<br>
+Community translation available for: <a href="https://expressjs.com/sk/">Slovak</a>, <a href="https://expressjs.com/uk/">Ukrainian</a>, <a href="https://expressjs.com/uz/">Uzbek</a> and <a href="https://expressjs.com/tr/">Turkish</a>.
+</section>
+<div id="footer-content">
+<div id="github">
+<iframe allowtransparency="true" scrolling="no" style="width: 48px; height: 20px; border: medium none;" src="Express%20application%20generator_files/buttons.htm" frameborder="0"></iframe>
+</div>
+<div id="sponsor"><a href="https://github.com/expressjs/express/" wrc_done="true">Express</a><span class="wrc1 wrc_icon wrc_injected"></span>
+is a project of the <a href="http://nodejs.org/foundation" wrc_done="true"></a><span class="wrc1 wrc_icon wrc_injected"></span>Node.js Foundation.</div>
+<div id="fork"><a href="https://github.com/expressjs/expressjs.com/blob/gh-pages/en/starter/generator.md" wrc_done="true">Edit this page on GitHub</a><span class="wrc1 wrc_icon wrc_injected"></span>.</div>
+<div>Copyright © 2017 StrongLoop, IBM, and other expressjs.com contributors.</div>
+</div>
+<div id="license">
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" wrc_done="true"><img alt="Creative Commons License" style="border-width:0" src="Express%20application%20generator_files/80x15.png"></a><span class="wrc1 wrc_icon wrc_injected"></span> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/" wrc_done="true">Creative Commons Attribution-ShareAlike 3.0 United States License</a><span class="wrc1 wrc_icon wrc_injected"></span>.
+</div>
+</footer>
+<script async="" defer="defer" data-rocketsrc="https://buttons.github.io/buttons.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+
+
+<span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px &quot;Helvetica Neue&quot;,Helvetica,sans-serif; color: rgb(255, 255, 255); background: rgb(189, 8, 28) url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: medium none;">Save</span></body></html>

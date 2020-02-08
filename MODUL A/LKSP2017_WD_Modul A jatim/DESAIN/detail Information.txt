@@ -1,0 +1,27 @@
+
+Industry Name: Geek-Boot
+motto: Where Inovation, Create the best future
+Address: 606-3727 Ullamcorper. Street
+Phone: (786) 713-8616
+
+
+Feature
+Geek-Bot is a company that focus in robot development. These are the advantage of our product:
+- Flexible : Geek-Bot products always designed to be as flexible as possible in both software and mechanics.
+- Efficien : Geek-Bot product has a very good efficiency, both in terms of energy, and movement.
+- Model : Geek-Bot product designed with an attractive shape without reducing the efficiency of the product.
+- Programming : Geek-Bot programing supported by open source community and there are many tutorials on internet.
+
+Type:
+Type
+- Transportation
+- Education
+- Industry
+
+Product:
+- Neo robot is a robot made in 2016 that can move like human. Neo Robot is very useful in the process of introducing robots to high school students. The programming language based on C so it quite easy to be understood by the teacher.
+- WV robot is a kind of robot lego, this robot can be used for highly interactive teaching learning process for elementary school students. WV robots can be shaped and programmed as desired. in programming robot WV, we do not have to know a base of programming language. programming robot WV is by arranging logic blocks with precise.
+- BTK10 is an industrial robot that can do some work in factories like workers in general. BTK10 compiled using a strong frame to lift loads weighing 50 Kg.
+- C-Wheel is the latest robot output, this robot is intended for transportation of goods, this robot is equipped with auto drive feature, so that passengers just setting up the destination location and C-Wheel will move towards the destination location.
+
+

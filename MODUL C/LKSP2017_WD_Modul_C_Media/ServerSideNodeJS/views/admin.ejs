@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href="/stylesheets/bootstrap.css" >
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+     <!-- Fixed navbar -->
+     <nav class="navbar navbar-default navbar-fixed-top" style="background:#002350;">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          <h4 class="nav-head-custom">GEEK BOT</h4>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a  href="#">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row" >
+      <div class="col-md-2 col-sm-2 col-lg-2">
+          <div class="head" style="background:url('/images/wallpaper.jpg')">
+              <h1 style="background:#002350;padding:10%;color:white;"><%= manage %> </h1>
+          </div>
+      </div>
+      <div class="col-md-9 col-sm-9 col-lg-9 admin-box" style="margin-top:70px;">
+        <h1>Product</h1>
+          <button type="button" class="btn btn-primary" onclick="AddData()">Add Product</button>
+          <br><br>
+        <div class="table-responsive">          
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Berat</th>
+                <th>Warna</th>
+                <th>Tanggal Produksi</th>
+                <th>Harga Produk</th>
+                <th>Kategori</th>
+              </tr>
+            </thead>
+            <tbody>
+   <!--           <tr>
+                <td>0</td>
+                <td>Contoh Tabel</td>
+                <td>3</td>
+                <td>white</td>
+                <td>1997-06-27</td>
+                <td>1000000</td>
+                <td>Tool</td>
+                <td><button type="button" class="btn btn-success" onclick="EditData(this);" >Edit</button>
+                  <button type="button" class="btn btn-danger">Delete</button></td>
+              </tr>-->
+                 
+                  
+           
+            </tbody>
+          </table>
+          </div>
+          <h1>Category</h1>
+          <button type="button" class="btn btn-primary" onclick="AddCat()">Add Category</button>
+          <br><br>
+          <div class="table-responsive">          
+              <table class="table">
+                <tbody>
+                <!--  <tr>
+                    <td>Contoh</td>
+                    <td><button type="button" class="btn btn-danger">Delete</button></td>
+                  </tr>-->
+                      
+                      
+                </tbody>
+              </table>
+              </div>
+          
+
+        </div>
+      
+      <div class="col-md-1 col-sm-1 col-lg-1">
+        <div class="head" style="background:url('/images/wallpaper.jpg')">
+      </div>
+      </div>
+    </div>
+
+    <!-- The Modal Category -->
+<div id="ModalEditor" class="modal">
+    
+   <!-- Modal content -->
+   <div class="modal-content">
+     <div class="modal-header">
+       <span class="close">&times;</span>
+       <h2>Edit Data</h2>
+     </div>
+     <div class="modal-body">
+         <form  action="/admin/insert" method="get" class="data">
+           <div class="row">
+              <div class="col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-3 col-sm-3 col-lg-3">
+                <ul id="tabpad">
+                  <li>ID</li>
+                  <li>Nama</li>
+                  <li>Berat</li>
+                  <li>Warna</li>
+                  <li>Tanggal Produksi</li>
+                  <li>Harga</li>
+                  <li>Kategori</li>
+                </ul>
+                </div>
+                <div class="col-md-5 col-sm-5 col-lg-5 ">
+                    <ul class="modal-info">
+                        <li> : <input type="text"   onchange="InvalidId(this);" oninvalid="InvalidId(this);" name="id" oninput="InvalidId(this);" required></li>
+                        <li> : <input type="text" name="nama" required></li>
+                        <li> : <input type="number" name="berat" required></li>
+                        <li> : <input type="text" name="warna" required></li>
+                        <li> : <input type="date" name="tanggal" required></li>
+                        <li> : <input type="number" name="harga" required></li>
+                        <li> :  <select name="kategori" required>
+                     
+                              <!--    <option value="harga">contoh</option>-->
+                            
+                          
+                              </select>
+                        </li>
+                    </ul>
+
+                </div>
+           </div>
+
+           <input type="submit"  name="submit" value="submit">
+         </form>
+     </div>
+     <div class="modal-footer">
+       
+     </div>
+   </div>
+ 
+ </div>
+  
+     <!-- The Modal Category -->
+<div id="ModalKategori" class="modal">
+    
+   <!-- Modal content -->
+   <div class="modal-content">
+     <div class="modal-header">
+       <span class="close">&times;</span>
+       <h2>Edit Data</h2>
+     </div>
+     <div class="modal-body">
+         <form  action="/admin/insertcat" method="get" class="data">
+           <div class="row">
+              <div class="col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-3 col-sm-3 col-lg-3">
+                <ul id="tabpad">
+                  <li>Kategori</li>
+                </ul>
+                </div>
+                <div class="col-md-5 col-sm-5 col-lg-5 ">
+                    <ul class="modal-info">
+                        <li> : <input type="text" oninvalid="InvalidCat(this);" name="kategori" oninput="InvalidCat(this);"   required></li>
+                    </ul>
+
+                </div>
+           </div>
+
+           <input type="submit"  name="submit" value="submit">
+         </form>
+     </div>
+     <div class="modal-footer">
+       
+     </div>
+   </div>
+ 
+ </div>
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="/javascripts/jquery-3.1.0.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="/javascripts/bootstrap.js"></script>
+
+     <script>
+     // Get the modal
+var modal = document.getElementById('ModalEditor');
+var modKa = document.getElementById('ModalKategori');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var spanCat = document.getElementsByClassName("close")[1];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    
+}
+
+spanCat.onclick = function(){
+  modKa.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }else if(event.target == modKa){
+      modKa.style.display = "none";
+    }
+}
+
+
+  //kode,barang,jumlah,unit,harga,disc
+function EditData(select) {
+  $("form.data").attr('action','/admin/update');
+  
+  var tr = $(select).parent().parent();
+  var tdata = $(tr).children();
+  var inp = $(".modal-info").children();
+  $( inp[0] ).children().prop("readonly",true);//cannot edit
+  for (var i = 0; i < inp.length; i++) {
+    $( inp[i] ).children().val( $(tdata[i]).text() );
+    
+  }
+
+  modal.style.display = "block";  
+}
+
+
+
+function AddData() {
+  $("form.data").attr('action','/admin/insert');
+  var inp = $(".modal-info").children();
+  $( inp[0] ).children().prop("readonly",false);//can edit
+  for (var i = 0; i < inp.length; i++) {
+    $( inp[i] ).children().val( "" );
+    
+  }
+
+  
+
+  modal.style.display = "block";  
+}
+
+function AddCat() {
+  modKa.style.display = "block";
+}
+
+function InvalidId(textbox) {
+var duplicate='' ;
+  $(".IdList").each(function(index){
+    console.log($(".IdList").eq(index).html());
+    if(textbox.value == $(".IdList").eq(index).html()){
+      duplicate = $(".IdList").eq(index).html();
+    }
+  })
+
+
+  if (textbox.value == '') {
+        textbox.setCustomValidity('This Form is required');
+  }
+  else if(textbox.value.toLowerCase() == duplicate.toLowerCase() ){
+        textbox.setCustomValidity( duplicate +' product already exist');
+  }
+  else {
+        textbox.setCustomValidity('');
+    }
+    return true;
+}
+
+
+function InvalidCat(textbox) {
+var duplicate='' ;
+  $(".CatList").each(function(index){
+    if(textbox.value.toLowerCase() == $(".CatList").eq(index).html().toLowerCase() ){
+      duplicate = $(".CatList").eq(index).html();
+    }
+  })
+
+
+  if (textbox.value == '') {
+        textbox.setCustomValidity('Input new category');
+  }
+  else if(textbox.value.toLowerCase() == duplicate.toLowerCase() ){
+        textbox.setCustomValidity( duplicate +' category already exist');
+  }
+  else {
+        textbox.setCustomValidity('');
+    }
+    return true;
+}
+
+     </script>
+  </body>
+</html>
